@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS SYSTEM</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">cruds</div>
+          <div class="title">product management system</div>
+        </div>
+      </div>
+    </div>
+    <div class="inputs">
+      <div class="container">
+        <input type="text" id="title" placeholder="Title" />
+        <div class="price">
+          <input type="number" id="price" placeholder="Price" />
+          <input type="number" id="tax" placeholder="Taxes" />
+          <input type="number" id="ads" placeholder="Ads" />
+          <input type="number" id="discount" placeholder="Discount" />
+          <div id="total"></div>
+        </div>
+        <input type="number" id="count" placeholder="Count" />
+        <input type="text" id="category" placeholder="Category" />
+        <button id="submit">Create</button>
+      </div>
+    </div>
+    <div class="outputs">
+      <div class="container">
+        <input type="text" id="search" placeholder="Search by title" />
+        <div class="search-btns">
+          <button id="title">Search By Title</button>
+          <button id="category">Search By Category</button>
+        </div>
+        <div id="deleteAll"></div>
+        <table cellspacing="0">
+          <thead>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

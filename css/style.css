@@ -1,0 +1,289 @@
+/* Start Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #35383b;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --mainColor: #930aaa;
+  --mainBackground: #00bcd4
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* End Global */
+
+/* Start Header */
+
+.header {
+  background-color: var(--mainBackground);
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .header .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.header .navbar .logo {
+  color: var(--mainColor);
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: -3px
+}
+
+.header .navbar .title {
+  color: var(--mainColor);
+  font-size: 20px;
+  margin: 5px;
+  letter-spacing: -1px;
+}
+
+/* End Header */
+
+/* Start Inputs */
+
+.inputs {
+  padding-top: 50px;
+}
+
+.inputs input, .inputs button {
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  padding: 25px;
+  border: none;
+  outline: none;
+  background-color: #111;
+  color: #FFF;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.inputs input {
+  transition: transform .3s ease-in-out;
+}
+
+.inputs input:focus {
+  background-color: #000;
+  transform: scale(1.1);
+}
+
+.inputs .price input {
+  width: calc(25% - 11px);
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .inputs .price input {
+    width: calc(50% - 8px);
+  }
+
+  .inputs .price input:nth-of-type(2) {
+    margin-right: 0;
+  }
+
+  .inputs .price input:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.inputs .price input:last-of-type {
+  margin-right: 0;
+}
+
+.inputs .price div {
+  background-color: #27134a;
+  padding: 15px 5px;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.inputs .price div::before {
+  content: 'Total = ';
+  font-weight: bold;
+  color: var(--mainBackground)
+}
+
+.inputs button {
+  line-height: 0;
+  background-color: var(--mainBackground);
+  color: var(--mainColor);
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: .8;
+  letter-spacing: 0;
+  transition: all .3s ease-in-out;
+}
+
+.inputs button:hover {
+  opacity: 1;
+  letter-spacing: 1px;
+}
+
+/* End Inputs */
+
+/* Start Outputs */
+
+.outputs {
+  padding-bottom: 50px;
+}
+
+.outputs input, .outputs .search-btns button {
+  height: 40px;
+  margin: 10px 0;
+  padding: 25px;
+  border: none;
+  outline: none;
+  background-color: #111;
+  color: #FFF;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.outputs input {
+  width: 100%;
+  transition: transform .3s ease-in-out;
+}
+
+.outputs input:focus {
+  background-color: #000;
+  transform: scale(1.1);
+}
+
+.search-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-btns button {
+  width: 45%;
+}
+
+.outputs .search-btns button {
+  line-height: 0;
+  background-color: var(--mainBackground);
+  color: var(--mainColor);
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: .8;
+  letter-spacing: 0;
+  transition: all .3s ease-in-out;
+}
+
+.outputs .search-btns button:hover {
+  opacity: 1;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .outputs .search-btns button {
+    width: 48%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 13px;
+    letter-spacing: 0
+  };
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--mainColor);
+  font-weight: bold;
+  border-collapse: collapse;
+}
+
+@media (max-width: 1024px) {
+  table thead {
+    display: none;
+  }
+
+  table, table tbody, table tr, table td {
+    display: block;
+    width: 100%;
+  }
+
+  table tr {
+    margin-bottom: 15px;
+  }
+
+  table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  table button {
+    width: 50%;
+  }
+}
+
+th, td {
+  border: 1px solid #35383b;
+  padding: 10px;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #AAA
+}
+
+table tbody tr:nth-of-type(odd) {
+  background-color: #CCC
+}
+
+th {
+  text-transform: uppercase;
+  background-color: darkblue;
+  color: #FFF;
+}
+
+table button {
+  background-color: #27134a;
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* End Outputs */
